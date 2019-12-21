@@ -12,17 +12,17 @@ namespace Cint.CleanerBot
 
         public int Y { get; }
         public int X { get; }
-        public Point GetNeighborLocation(string direction)
+        public Point GetNeighborLocation(Direction direction)
         {
             switch (direction)
             {
-                case "E":
+                case Direction.East:
                     return new Point(X - 1, Y);
-                case "W":
+                case Direction.West:
                     return new Point(X + 1, Y);
-                case "N":
+                case Direction.North:
                     return new Point(X, Y + 1);
-                case "S":
+                case Direction.South:
                     return new Point(X, Y - 1);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(direction), direction, null);

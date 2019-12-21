@@ -31,7 +31,7 @@ namespace Cint.CleanerBot
 
         private List<Point> CleanedLocations { get; set; }
 
-        public void Move(string direction, int step)
+        public void Move(Direction direction, int step)
         {
             while (step >= 1)
             {

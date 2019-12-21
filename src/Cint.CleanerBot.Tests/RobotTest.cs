@@ -20,11 +20,11 @@ namespace Cint.CleanerBot.Tests
         }
 
         [Theory]
-        [InlineData("E", 1)]
-        [InlineData("W", 1)]
-        [InlineData("N", 1)]
-        [InlineData("S", 1)]
-        public void Move_WithOneCommand_TwoPointsMustBeCleaned(string direction, int step)
+        [InlineData(Direction.East, 1)]
+        [InlineData(Direction.West, 1)]
+        [InlineData(Direction.North, 1)]
+        [InlineData(Direction.South, 1)]
+        public void Move_WithOneCommand_TwoPointsMustBeCleaned(Direction direction, int step)
         {
             //arrange
             const int startingX = 10;
