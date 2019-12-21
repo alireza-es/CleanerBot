@@ -24,7 +24,7 @@ namespace Cint.CleanerBot.Tests
     {
         public Robot(int x, int y)
         {
-
+            CurrentLocation = new Point{X = x, Y = y};
         }
 
         public Point CurrentLocation { get; set; }
