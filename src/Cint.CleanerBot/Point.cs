@@ -2,6 +2,9 @@
 
 namespace Cint.CleanerBot
 {
+    /// <summary>
+    /// A Value Object to represent coordinates of a point
+    /// </summary>
     public class Point
     {
         public Point(in int x, in int y)
@@ -10,8 +13,13 @@ namespace Cint.CleanerBot
             Y = y;
         }
 
-        public int Y { get; }
         public int X { get; }
+        public int Y { get; }
+        /// <summary>
+        /// Get the Neighbor point of this point depend on direction
+        /// </summary>
+        /// <param name="direction"></param>
+        /// <returns></returns>
         public Point GetNeighborLocation(Direction direction)
         {
             switch (direction)
@@ -28,7 +36,10 @@ namespace Cint.CleanerBot
                     throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
         }
-
+        /// <summary>
+        /// String representation of point
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"[{X},{Y}]";

@@ -1,4 +1,6 @@
-﻿namespace Cint.CleanerBot
+﻿using System;
+
+namespace Cint.CleanerBot
 {
     public enum Direction
     {
@@ -22,10 +24,10 @@
                     return Direction.North;
                 case "S":
                     return Direction.South;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
 
             }
-
-            return 0;
         }
     }
 }

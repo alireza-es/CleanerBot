@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Cint.CleanerBot
 {
     public class Robot
     {
+        private List<Point> CleanedLocations { get; set; }
+
         private Point _currentLocation;
-
-        public Robot(int x, int y)
-        {
-            CurrentLocation = new Point(x, y);
-        }
-
         public Point CurrentLocation
         {
             get => _currentLocation;
@@ -29,7 +24,10 @@ namespace Cint.CleanerBot
             }
         }
 
-        private List<Point> CleanedLocations { get; set; }
+        public Robot(int x, int y)
+        {
+            CurrentLocation = new Point(x, y);
+        }
 
         public void Move(Direction direction, int step)
         {
