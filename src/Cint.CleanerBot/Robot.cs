@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace Cint.CleanerBot
 {
     public class Robot
     {
-        private List<Point> CleanedLocations { get; set; }
+        private HashSet<Point> CleanedLocations { get; set; }
 
         private Point _currentLocation;
         public Point CurrentLocation
@@ -16,10 +15,9 @@ namespace Cint.CleanerBot
                 _currentLocation = value;
 
                 if(CleanedLocations == null)
-                    CleanedLocations = new List<Point>();
+                    CleanedLocations = new HashSet<Point>();
 
-                if (!CleanedLocations.Any(p => p.X == CurrentLocation.X && p.Y == CurrentLocation.Y))
-                    CleanedLocations.Add(CurrentLocation);
+                CleanedLocations.Add(CurrentLocation);
 
             }
         }

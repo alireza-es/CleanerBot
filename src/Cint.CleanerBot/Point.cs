@@ -5,7 +5,7 @@ namespace Cint.CleanerBot
     /// <summary>
     /// A Value Object to represent coordinates of a point
     /// </summary>
-    public class Point
+    public class Point : IEquatable<Point>
     {
         public Point(in int x, in int y)
         {
@@ -43,6 +43,29 @@ namespace Cint.CleanerBot
         public override string ToString()
         {
             return $"[{X},{Y}]";
+        }
+
+        public bool Equals(Point other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return X == other.X && Y == other.Y;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Point) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (X * 397) ^ Y;
+            }
         }
     }
 }
