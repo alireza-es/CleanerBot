@@ -4,7 +4,7 @@
     {
         public Robot(int x, int y)
         {
-            CurrentLocation = new Point{X = x, Y = y};
+            CurrentLocation = new Point(x, y);
         }
 
         public Point CurrentLocation { get; set; }
