@@ -19,20 +19,4 @@ namespace Cint.CleanerBot.Tests
             Assert.Equal(startingY, robot.CurrentLocation.Y);
         }
     }
-
-    public class Robot
-    {
-        public Robot(int x, int y)
-        {
-            CurrentLocation = new Point{X = x, Y = y};
-        }
-
-        public Point CurrentLocation { get; set; }
-    }
-
-    public class Point
-    {
-        public int Y { get; set; }
-        public int X { get; set; }
-    }
 }
