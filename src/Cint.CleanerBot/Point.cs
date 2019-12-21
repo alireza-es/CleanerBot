@@ -4,10 +4,15 @@
     {
         public Point(in int x, in int y)
         {
-            throw new System.NotImplementedException();
+            X = x;
+            Y = y;
         }
 
         public int Y { get; set; }
         public int X { get; set; }
+        public override string ToString()
+        {
+            return $"[{X},{Y}]";
+        }
     }
 }
