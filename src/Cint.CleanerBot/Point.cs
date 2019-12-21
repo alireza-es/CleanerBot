@@ -25,9 +25,9 @@ namespace Cint.CleanerBot
             switch (direction)
             {
                 case Direction.East:
-                    return new Point(X - 1, Y);
-                case Direction.West:
                     return new Point(X + 1, Y);
+                case Direction.West:
+                    return new Point(X - 1, Y);
                 case Direction.North:
                     return new Point(X, Y + 1);
                 case Direction.South:
