@@ -35,26 +35,9 @@ namespace Cint.CleanerBot
         {
             while (step >= 1)
             {
-                CurrentLocation = GetNeighborLocation(direction);
+                CurrentLocation = CurrentLocation.GetNeighborLocation(direction);
 
                 step--;
-            }
-        }
-
-        private Point GetNeighborLocation(string direction)
-        {
-            switch (direction)
-            {
-                case "E":
-                    return new Point(CurrentLocation.X - 1, CurrentLocation.Y);
-                case "W":
-                    return new Point(CurrentLocation.X + 1, CurrentLocation.Y);
-                case "N":
-                    return new Point(CurrentLocation.X, CurrentLocation.Y + 1);
-                case "S":
-                    return new Point(CurrentLocation.X, CurrentLocation.Y - 1);
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
         }
 
