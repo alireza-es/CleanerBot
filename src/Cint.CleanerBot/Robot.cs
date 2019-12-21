@@ -8,5 +8,15 @@
         }
 
         public Point CurrentLocation { get; set; }
+
+        public void Move(string direction, in int step)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int GetCleanedPoints()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
