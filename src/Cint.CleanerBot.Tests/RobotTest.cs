@@ -36,7 +36,7 @@ namespace Cint.CleanerBot.Tests
             robot.Move(direction, step);
 
             //check
-            Assert.Equal(2, robot.GetCleanedPoints());
+            Assert.Equal(2, robot.GetCleanedLocations());
         }
     }
 }
