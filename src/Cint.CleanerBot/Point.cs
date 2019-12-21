@@ -62,10 +62,7 @@ namespace Cint.CleanerBot
 
         public override int GetHashCode()
         {
-            unchecked
-            {
-                return (X * 397) ^ Y;
-            }
+            return $"{X}-{Y}".GetHashCode();
         }
     }
 }
