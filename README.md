@@ -1,5 +1,5 @@
 # CleanerBot
-[![CircleCI](https://circleci.com/gh/alireza-es/CleanerBot.svg?style=svg)](https://circleci.com/gh/alireza-es/CleanerBot)[![build status](https://img.shields.io/azure-devops/build/alireza-es/CleanerBot/6)](https://dev.azure.com/alireza-es/CleanerBot/_build?definitionId=6) [![test results](https://img.shields.io/azure-devops/tests/alireza-es/CleanerBot/6)](https://dev.azure.com/alireza-es/CleanerBot/_build?definitionId=6)
+[![CircleCI](https://circleci.com/gh/alireza-es/CleanerBot.svg?style=svg)](https://circleci.com/gh/alireza-es/CleanerBot) [![build status](https://img.shields.io/azure-devops/build/alireza-es/CleanerBot/6)](https://dev.azure.com/alireza-es/CleanerBot/_build?definitionId=6) [![test results](https://img.shields.io/azure-devops/tests/alireza-es/CleanerBot/6)](https://dev.azure.com/alireza-es/CleanerBot/_build?definitionId=6)
 
 
 
