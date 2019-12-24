@@ -27,8 +27,6 @@ namespace Cint.CleanerBot.UI
 
                 robot.Move(direction, step);
             }
-
-            Console.WriteLine("\n***** Finished *****\n");
             Console.WriteLine($"=> Cleaned: {robot.GetCleanedLocations()}");
         }
     }
