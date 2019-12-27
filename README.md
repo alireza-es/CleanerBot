@@ -39,5 +39,7 @@ Because Point is showing coordinates, we can say that if two point objects have 
         }
     }
 ```
+furthermore, the Point value object has a method called `GetNeighborLocation` that returns its neighbor location to use in Robot. It returns a new Point because it is a new Point with a different coordinates.
+
 # Development Approach
 Our approach to development is **TDD (Test-Driven Development)**. We use the **Test-First** method in design and implementation. We use three different **CI/CD** services to run continuous integration of our solution. When any changeset pushes on GitHub our build in three CI servers start to run and the result of the last build is shown on the top of this page in related build badges. Our selected CI servers are **Microsoft Azure DevOps**, **TravisCI** and **CicleCi**.
