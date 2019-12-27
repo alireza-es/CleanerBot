@@ -53,3 +53,8 @@ We use three different **CI/CD** services to run continuous integration of our s
 - [**Microsoft Azure DevOps**](https://dev.azure.com/alireza-es/CleanerBot/_build/latest?definitionId=6&branchName=master)
 - [**TravisCI** ](https://www.travis-ci.com/alireza-es/CleanerBot)
 - [**CicleCi**](https://circleci.com/gh/alireza-es/CleanerBot)
+
+<img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/ci/azuredevops.png"/>
+<img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/ci/circleci.png"/>
+<img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/ci/travisci.png"/>
+
