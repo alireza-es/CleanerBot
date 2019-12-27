@@ -28,10 +28,10 @@ namespace Cint.CleanerBot.Tests
             var input = "U";
 
             //act
-            Action action = () => input.ParseDirection();
+            void Action() => input.ParseDirection();
 
             //check
-            var exception = Assert.Throws<ArgumentOutOfRangeException>(action);
+            var exception = Assert.Throws<ArgumentOutOfRangeException>(Action);
             
             Assert.Equal(input, exception.ActualValue);
             Assert.Equal("direction", exception.ParamName);
