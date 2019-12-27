@@ -45,7 +45,7 @@ furthermore, the Point value object has a method called `GetNeighborLocation` th
 ## Test-Driven Development
 Our approach to development is **TDD (Test-Driven Development)**. We use the **Test-First** method in design and implementation. 
 
-<img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/images/CodeCoverage.JPG"/>
+<img src="https://alireza-es.github.io/CleanerBot/docs/images/CodeCoverage.JPG"/>
 
 We use **`XUnit`** framework to write unit tests.
 ## Continous Integration
@@ -54,7 +54,7 @@ We use three different **CI/CD** services to run continuous integration of our s
 - [**TravisCI** ](https://www.travis-ci.com/alireza-es/CleanerBot)
 - [**CicleCi**](https://circleci.com/gh/alireza-es/CleanerBot)
 <p align="center">
-<img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/ci/azuredevops.png" width="100px"/> <img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/ci/circleci.png" width="100px"/> <img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/ci/travisci.png" width="100px"/>
+<img src="https://alireza-es.github.io/CleanerBot/docs/ci/azuredevops.png" width="100px"/> <img src="https://alireza-es.github.io/CleanerBot/docs/ci/circleci.png" width="100px"/> <img src="https://alireza-es.github.io/CleanerBot/docs/ci/travisci.png" width="100px"/>
 </p>
 
 
