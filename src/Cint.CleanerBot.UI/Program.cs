@@ -16,7 +16,7 @@ namespace Cint.CleanerBot.UI
         {
             //setup our DI
             var serviceProvider = new ServiceCollection()
-                .AddScoped<IInputReader, ConsoleReader>()
+                .AddScoped<IReader, ConsoleReader>()
                 .AddScoped<IWriter, ConsoleWriter>()
                 .AddScoped<IRobotController, RobotController>()
                 .BuildServiceProvider();
