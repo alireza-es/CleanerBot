@@ -45,9 +45,19 @@ furthermore, the Point value object has a method called `GetNeighborLocation` th
 ## Test-Driven Development
 Our approach to development is **TDD (Test-Driven Development)**. We use the **Test-First** method in design and implementation. 
 
-<img src="https://alireza-es.github.io/CleanerBot/docs/images/CodeCoverage.JPG"/>
+<img src="https://github.com/alireza-es/CleanerBot/blob/master/docs/images/CodeCoverage.JPG"/>
+
+### Test Framework
 
 We use **`XUnit`** framework to write unit tests.
+### Naming Convension
+In unit test methods we are using **`MethodName_StateUnderTest_ExpectedBehavior`** naming standard. following are some of examples:
+
+- `Equals_WhenTwoDifferentObjectsHaveTheSameCoordinates_ObjectsAreEqual`
+- `Move_WithOneCommand_TwoPointsMustBeCleaned`
+- `GetNeighborLocation_WithValidInput_GetValidResult`
+- `GetNeighborLocation_WithInValidInput_ThrowArgumentOutOfRangeException`
+
 ## Continous Integration
 We use three different **CI/CD** services to run continuous integration of our solution. When any changeset pushes on GitHub our build in three CI servers start to run and the result of the last build is shown on the top of this page in related build badges. Our selected CI servers are:
 - [**Microsoft Azure DevOps**](https://dev.azure.com/alireza-es/CleanerBot/_build/latest?definitionId=6&branchName=master)
