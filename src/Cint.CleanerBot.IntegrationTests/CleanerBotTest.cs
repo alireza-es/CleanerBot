@@ -18,6 +18,9 @@ namespace Cint.CleanerBot.IntegrationTests
 #endif
 
             var processInfo = new ProcessStartInfo("dotnet", appDllPath);
+            processInfo.UseShellExecute = false;
+            processInfo.CreateNoWindow = true;
+            processInfo.WindowStyle = ProcessWindowStyle.Hidden;
             processInfo.RedirectStandardInput = true;
             processInfo.RedirectStandardOutput = true;
             processInfo.RedirectStandardError = true;
