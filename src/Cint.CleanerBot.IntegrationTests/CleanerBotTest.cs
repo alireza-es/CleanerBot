@@ -1,27 +1,36 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using Xunit;
 
 namespace Cint.CleanerBot.IntegrationTests
 {
-    public class CleanerBotTest
+    public class CleanerBotTest : IDisposable
     {
-        [Fact]
-        public void CleanerBot_MainScenario_CleanedSuccessfully()
+        private Process process;
+
+        public CleanerBotTest()
         {
-            //arrange
+
 #if DEBUG
             const string appDllPath = @"..\..\..\..\Cint.CleanerBot.UI\bin\Debug\netcoreapp3.0\Cint.CleanerBot.UI.dll";
 #else
             const string appDllPath = @"..\..\..\..\Cint.CleanerBot.UI\bin\Release\netcoreapp3.0\Cint.CleanerBot.UI.dll";
 #endif
+
             var processInfo = new ProcessStartInfo("dotnet", appDllPath);
             processInfo.RedirectStandardInput = true;
             processInfo.RedirectStandardOutput = true;
+            processInfo.RedirectStandardError = true;
 
+            process = Process.Start(processInfo);
+        }
+
+        [Fact]
+        public void CleanerBot_MainScenario_CleanedSuccessfully()
+        {
+            //arrange
 
             //act
-            var process = Process.Start(processInfo);
-
             process.StandardInput.WriteLine("2");
             process.StandardInput.WriteLine("10 22");
             process.StandardInput.WriteLine("E 2");
@@ -29,6 +38,12 @@ namespace Cint.CleanerBot.IntegrationTests
 
             //check
             Assert.Equal("=> Cleaned: 4", process.StandardOutput.ReadLine());
+        }
+
+        public void Dispose()
+        {
+            process?.WaitForExit(1);
+            process?.Dispose();
         }
     }
 }

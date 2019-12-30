@@ -13,4 +13,8 @@
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cint.CleanerBot.UI\Cint.CleanerBot.UI.csproj" />
+  </ItemGroup>
+
 </Project>
