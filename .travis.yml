@@ -6,7 +6,7 @@ dotnet: 3.0
 script:
     - dotnet restore
     - dotnet build
-    - dotnet test  --filter Category!=Integration
+    - dotnet test --filter Category!=Integration
 after_script:
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
