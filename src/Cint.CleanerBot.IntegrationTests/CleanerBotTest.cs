@@ -36,7 +36,7 @@ namespace Cint.CleanerBot.IntegrationTests
             process.StandardInput.WriteLine("N 1");
 
             var error = process.StandardError.ReadToEnd();
-            Assert.Null(error);
+            Assert.Empty(error);
             //check
             Assert.Equal("=> Cleaned: 4", process.StandardOutput.ReadLine());
         }
