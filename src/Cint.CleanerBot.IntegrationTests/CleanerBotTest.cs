@@ -11,11 +11,7 @@ namespace Cint.CleanerBot.IntegrationTests
         public CleanerBotTest()
         {
 
-#if DEBUG
             const string appDllPath = @"..\..\..\..\Cint.CleanerBot.UI\bin\Debug\netcoreapp3.0\Cint.CleanerBot.UI.dll";
-#else
-            const string appDllPath = @"..\..\..\..\Cint.CleanerBot.UI\bin\Release\netcoreapp3.0\Cint.CleanerBot.UI.dll";
-#endif
 
             var processInfo = new ProcessStartInfo("dotnet", appDllPath);
             processInfo.UseShellExecute = false;
