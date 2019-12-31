@@ -7,19 +7,29 @@ namespace Cint.CleanerBot
     /// </summary>
     public class Point : IEquatable<Point>
     {
+        /// <summary>
+        /// Create a point object with its required attributes: x, y
+        /// </summary>
+        /// <param name="x">x coordinate of point object</param>
+        /// <param name="y">y coordinate of point object</param>
         public Point(in int x, in int y)
         {
             X = x;
             Y = y;
         }
-
+        /// <summary>
+        /// X coordinate of point object
+        /// </summary>
         public int X { get; }
+        /// <summary>
+        /// Y coordinate of point object
+        /// </summary>
         public int Y { get; }
         /// <summary>
         /// Get the Neighbor point of this point depend on direction
         /// </summary>
-        /// <param name="direction"></param>
-        /// <returns></returns>
+        /// <param name="direction">The direction of the neighbor we are looking for</param>
+        /// <returns>Neighbor's location as a new Point'</returns>
         public Point GetNeighborLocation(Direction direction)
         {
             switch (direction)
@@ -37,9 +47,9 @@ namespace Cint.CleanerBot
             }
         }
         /// <summary>
-        /// String representation of point
+        /// Convert Point to String 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String representation of point</returns>
         public override string ToString()
         {
             return $"[{X},{Y}]";
@@ -59,7 +69,10 @@ namespace Cint.CleanerBot
             if (obj.GetType() != this.GetType()) return false;
             return Equals((Point) obj);
         }
-
+        /// <summary>
+        /// Generate a unique hashcode of this point
+        /// </summary>
+        /// <returns>The unique hashcode of this point</returns>
         public override int GetHashCode()
         {
             return $"{X}-{Y}".GetHashCode();
