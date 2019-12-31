@@ -6,9 +6,8 @@ dotnet: 3.0
 script:
     - dotnet restore
     - dotnet build
-    - dotnet test 
+    - dotnet test  --filter Category!=Integration
 after_script:
-    - dotnet test --filter Category!=Integration
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
     - aws ecr get-login --region us-west-2 --no-include-email
