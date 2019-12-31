@@ -25,6 +25,7 @@ namespace Cint.CleanerBot.IntegrationTests
         }
 
         [Fact]
+        [Trait("Category", "Integration")]
         public void CleanerBot_MainScenario_CleanedSuccessfully()
         {
             //arrange

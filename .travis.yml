@@ -8,7 +8,7 @@ script:
     - dotnet build
     - dotnet test 
 after_script:
-    - dotnet test --filter TestCategory=OPTIONAL-TEST
+    - dotnet test --filter Category!=Integration
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
     - aws ecr get-login --region us-west-2 --no-include-email
