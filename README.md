@@ -51,7 +51,7 @@ There are two types of tests in our solution:
 
 ### Test Framework
 
-We use **`XUnit`** framework to write unit tests.
+We use **`XUnit`** framework to write unit tests. `xUnit.net` is a free, open-source, community-focused unit testing tool for the .NET Framework.
 ### Naming Convension
 In unit test methods we are using **`MethodName_StateUnderTest_ExpectedBehavior`** naming standard. following are some of examples:
 
@@ -61,7 +61,8 @@ In unit test methods we are using **`MethodName_StateUnderTest_ExpectedBehavior`
 - `GetNeighborLocation_WithInValidInput_ThrowArgumentOutOfRangeException`
 
 ## Continous Integration
-We use three different **CI/CD** services to run the continuous integration of our solution. When any changeset pushes on GitHub our build in three CI servers start to run and the result of the last build is shown on the top of this page in related build badges. Our selected CI servers are:
+Continuous Integration (CI) involves producing a clean build of the system several times per day, usually with a tool like TravisCI, Azure DevOps, etc. Agile teams typically configure CI to include automated compilation, unit test execution, and source control integration. 
+Here, We use three different **CI/CD** services to run the continuous integration of our solution. When any changeset pushes on GitHub our build in three CI servers start to run and the result of the last build is shown on the top of this page in related build badges. Our selected CI servers are:
 - [**Microsoft Azure DevOps**](https://dev.azure.com/alireza-es/CleanerBot/_build/latest?definitionId=6&branchName=master)
 - [**TravisCI** ](https://www.travis-ci.com/alireza-es/CleanerBot)
 - [**CicleCi**](https://circleci.com/gh/alireza-es/CleanerBot)
