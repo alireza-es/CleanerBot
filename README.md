@@ -39,7 +39,7 @@ Because Point is showing coordinates, we can say that if two point objects have 
         }
     }
 ```
-furthermore, the Point value object has a method called `GetNeighborLocation` that returns its neighbor location to use in Robot. It returns a new Point because it is a new Point with a different coordinates.
+furthermore, the Point value object has a method called `GetNeighborLocation` that returns its neighbor location to use in Robot. It returns a new Point because it is a new Point with different coordinates.
 
 # Development Approach
 ## Test-Driven Development
@@ -67,7 +67,9 @@ Here, We use three different **CI/CD** services to run the continuous integratio
 - [**TravisCI** ](https://www.travis-ci.com/alireza-es/CleanerBot)
 - [**CicleCi**](https://circleci.com/gh/alireza-es/CleanerBot)
 <p align="center">
-<img src="https://alireza-es.github.io/CleanerBot/docs/ci/azuredevops.png" width="100px"/> <img src="https://alireza-es.github.io/CleanerBot/docs/ci/circleci.png" width="100px"/> <img src="https://alireza-es.github.io/CleanerBot/docs/ci/travisci.png" width="100px"/>
+<img src="https://alireza-es.github.io/CleanerBot/docs/ci/azuredevops.png" width="90px"/>
+<img src="https://alireza-es.github.io/CleanerBot/docs/ci/circleci.png" width="90px"/>
+<img src="https://alireza-es.github.io/CleanerBot/docs/ci/travisci.png" width="90px"/>
 </p>
 
 
